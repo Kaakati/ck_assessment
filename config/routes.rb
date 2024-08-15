@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   post :checkout, to: "checkout#checkout"
   get :cart, to: "checkout#cart"
   post 'payments/create', to: 'payments#create'
+  get :hosted_payment, to: 'payments#hosted_payment'
+  get "payments/success", to: 'payments#success'
+  get "payments/failure", to: 'payments#failure'
 end
